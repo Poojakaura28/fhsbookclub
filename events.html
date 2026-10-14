@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Events · FHS Book Club</title>
 <meta name="description" content="FHS Book Club meetings, monthly activities and planned library events, with honest status labels.">
-<meta name="theme-color" content="#7A1F2B">
+<meta name="theme-color" content="#C23A25">
+<link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,8 +14,9 @@
 <header class="mast">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <span class="brand-main">FHS Book Club</span>
-      <span class="brand-tag">Read good books. Discuss. Repeat.</span>
+      <img class="brand-logo" src="images/logo.png" alt="" width="56" height="55">
+      <span class="brand-text"><span class="brand-main">FHS Book Club</span>
+      <span class="brand-tag">Read good books. Discuss. Repeat.</span></span>
     </a>
     <nav aria-label="Main">
       <ul>
@@ -22,7 +24,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="events.html" aria-current="page">Events</a></li>
         <li><a href="team.html">Meet the Team</a></li>
-        <li><a class="nav-join" href="join.html">Join</a></li>
+        <li><button class="nav-signup" type="button" data-signup-open hidden>Sign up</button></li>
       </ul>
     </nav>
   </div>
@@ -46,18 +48,17 @@
     <li><a href="#meetings">Club meetings</a></li>
     <li><a href="#activities">Monthly activities</a></li>
     <li><a href="#library">Library events</a></li>
-    <li><a href="#past">Past events</a></li>
   </ul>
 
   <section class="group" id="meetings" aria-labelledby="mH">
     <h2 id="mH">FHS club meetings</h2>
-    <p class="intro">Every other Thursday, during lunch, at school. Exact dates and the room go here once they&rsquo;re confirmed.</p>
+    <p class="intro">Every other Thursday, during lunch, at school. We meet in Room 87. Exact dates go here once they&rsquo;re confirmed.</p>
     <ul class="evlist" data-events="meetings"></ul>
   </section>
 
   <section class="group" id="activities" aria-labelledby="aH">
     <h2 id="aH">Monthly activities</h2>
-    <p class="intro">We aim for about one book-related activity a month. These are the ones we&rsquo;ve discussed. None is scheduled yet.</p>
+    <p class="intro">We aim for about one book-related activity a month. Our first one, book bedazzling, is confirmed. The others are ones we&rsquo;ve discussed and aren&rsquo;t scheduled yet.</p>
     <ul class="evlist" data-events="activities"></ul>
   </section>
 
@@ -67,11 +68,6 @@
     <ul class="evlist" data-events="library"></ul>
   </section>
 
-  <section class="group" id="past" aria-labelledby="pH">
-    <h2 id="pH">Past events</h2>
-    <p class="intro">Nothing real is listed here yet. The rows below are examples of how past events will look.</p>
-    <ul class="evlist" data-events="past"></ul>
-  </section>
 </div>
 
 <section class="band" aria-labelledby="bandH">
@@ -80,7 +76,7 @@
       <h2 id="bandH">Don&rsquo;t miss the next one.</h2>
       <p>Check back here as dates get confirmed.</p>
     </div>
-    <a class="btn" href="join.html">Join the FHS Book Club</a>
+    <a class="btn" href="team.html">Meet the team</a>
   </div>
 </section>
 </main>
@@ -98,12 +94,11 @@
         <li><a href="about.html">About</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="team.html">Meet the Team</a></li>
-        <li><a href="join.html">Join</a></li>
       </ul>
     </div>
     <div>
       <h2>Good to know</h2>
-      <p class="fine">This website has no sign-up form, no login and no tracking. It doesn&rsquo;t collect anything about you.</p>
+      <p class="fine" data-foot-note>This website has no sign-up form, no login and no tracking. It doesn&rsquo;t collect anything about you.</p>
     </div>
   </div>
 </footer>

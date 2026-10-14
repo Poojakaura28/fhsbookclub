@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shrivalli, President · FHS Book Club</title>
 <meta name="description" content="Meet Shrivalli, President of the FHS Book Club.">
-<meta name="theme-color" content="#7A1F2B">
+<meta name="theme-color" content="#C23A25">
+<link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -13,8 +14,9 @@
 <header class="mast">
   <div class="wrap">
     <a class="brand" href="../index.html">
-      <span class="brand-main">FHS Book Club</span>
-      <span class="brand-tag">Read good books. Discuss. Repeat.</span>
+      <img class="brand-logo" src="../images/logo.png" alt="" width="56" height="55">
+      <span class="brand-text"><span class="brand-main">FHS Book Club</span>
+      <span class="brand-tag">Read good books. Discuss. Repeat.</span></span>
     </a>
     <nav aria-label="Main">
       <ul>
@@ -22,7 +24,7 @@
         <li><a href="../about.html">About</a></li>
         <li><a href="../events.html">Events</a></li>
         <li><a href="../team.html" aria-current="true">Meet the Team</a></li>
-        <li><a class="nav-join" href="../join.html">Join</a></li>
+        <li><button class="nav-signup" type="button" data-signup-open hidden>Sign up</button></li>
       </ul>
     </nav>
   </div>
@@ -32,32 +34,16 @@
 <div class="wrap">
   <p class="crumbs"><a href="../team.html">Meet the Team</a> / Shrivalli</p>
 
-  <div class="profile">
-    <div class="plate"><svg viewBox="0 0 120 150" aria-hidden="true" focusable="false"><rect x="2" y="2" width="116" height="146" rx="3" fill="#7A1F2B" stroke="#231A14" stroke-width="3"/><rect x="12" y="12" width="96" height="126" fill="none" stroke="#FAF3E3" stroke-width="2" stroke-dasharray="5 5" opacity=".75"/><text x="60" y="97" text-anchor="middle" font-family="Georgia,serif" font-weight="800" font-size="74" fill="#FAF3E3">S</text><path d="M88 2 H108 V40 L98 31 L88 40 Z" fill="#FAF3E3" stroke="#231A14" stroke-width="2.5" stroke-linejoin="round"/></svg></div>
+  <div class="person">
+    <div class="photo-wrap"><div class="photo-slot" data-photo="shrivalli" data-base="../images/team/" style="--c:#C23A25;--ci:#FFFAF2"><span class="initial" aria-hidden="true">S</span><span class="soon">Photo coming soon</span></div></div>
     <div>
       <p class="kicker">Officer</p>
       <h1>Shrivalli</h1>
       <p class="role">President</p>
-
-      <div class="libcard">
-        <div class="stripe" aria-hidden="true"></div>
-        <dl>
-          <div class="f"><dt>Name</dt><dd>Shrivalli</dd></div>
-          <div class="f"><dt>Role</dt><dd>President</dd></div>
-          <div class="f"><dt>Favorite book</dt><dd>Nothing Like the Movies</dd></div>
-          <div class="f"><dt>Fun fact</dt><dd>Has a lot of hobbies.</dd></div>
-        </dl>
-      </div>
-
-      <div class="shelf" role="group" aria-label="Shrivalli&rsquo;s favorite book">
-      <div class="spine spine-burg">Nothing Like the Movies</div>
-      </div>
-      <p class="shelf-label">Shrivalli&rsquo;s favorite book</p>
-
-      <div class="words">
-        <h2>In Shrivalli&rsquo;s words</h2>
-        <p><span class="placeholder">[Add a sentence or two from Shrivalli. Delete this whole box if you don&rsquo;t want it.]</span></p>
-      </div>
+      <dl class="facts">
+        <div><dt>Favorite book</dt><dd>Nothing Like the Movies</dd></div>
+        <div><dt>Fun fact</dt><dd>Has a lot of hobbies.</dd></div>
+      </dl>
     </div>
   </div>
 
@@ -74,7 +60,7 @@
       <h2 id="bandH">Say hi at lunch.</h2>
       <p>The club meets every other Thursday, at school.</p>
     </div>
-    <a class="btn" href="../join.html">Join the FHS Book Club</a>
+    <a class="btn" href="../events.html">See upcoming events</a>
   </div>
 </section>
 </main>
@@ -92,12 +78,11 @@
         <li><a href="../about.html">About</a></li>
         <li><a href="../events.html">Events</a></li>
         <li><a href="../team.html">Meet the Team</a></li>
-        <li><a href="../join.html">Join</a></li>
       </ul>
     </div>
     <div>
       <h2>Good to know</h2>
-      <p class="fine">This website has no sign-up form, no login and no tracking. It doesn&rsquo;t collect anything about you.</p>
+      <p class="fine" data-foot-note>This website has no sign-up form, no login and no tracking. It doesn&rsquo;t collect anything about you.</p>
     </div>
   </div>
 </footer>

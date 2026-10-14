@@ -1,18 +1,20 @@
 /* =====================================================================
    FHS BOOK CLUB · shared styles
+   Palette from the club logo: dark maroon ink, flame red (--burg), deep red-brown (--green), orange, gold.
+   The variable names are old; the colors are the new scheme.
    Colors and fonts are the variables just below. Change them here and
    every page updates.
    ===================================================================== */
 :root{
-  --paper:#FAF3E3;     /* page */
-  --paper-2:#F1E6CC;   /* aged paper, for slips and notes */
-  --ink:#231A14;       /* text */
-  --muted:#5C4B3F;     /* secondary text */
-  --burg:#7A1F2B;      /* burgundy */
-  --green:#1F4D3A;     /* forest green */
-  --orange:#D9772B;    /* warm orange (fills only) */
-  --orange-ink:#9A4608;/* orange dark enough for text */
-  --rule:#B9A783;      /* thin lines */
+  --paper:#FFFAF2;     /* page */
+  --paper-2:#FDEBD0;   /* aged paper, for slips and notes */
+  --ink:#34120D;       /* text */
+  --muted:#6B4A40;     /* secondary text */
+  --burg:#C23A25;      /* burgundy */
+  --green:#7A2412;     /* forest green */
+  --orange:#F28C28;    /* warm orange (fills only) */
+  --orange-ink:#A24A00;/* orange dark enough for text */
+  --rule:#E6C9A8;      /* thin lines */
   --serif:Charter,"Bitstream Charter","Sitka Text",Cambria,Georgia,serif;
   --head:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
   --sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
@@ -22,8 +24,6 @@
 html{scroll-behavior:smooth;scroll-padding-top:16px}
 body{
   margin:0;color:var(--ink);background-color:var(--paper);
-  /* faint paper grain: a tiny SVG noise tile, nothing heavy */
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .15 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
   font:1.125rem/1.65 var(--serif);
   overflow-x:clip;
   -webkit-text-size-adjust:100%;
@@ -51,7 +51,8 @@ section{padding:3rem 0}
 /* ---------- masthead (nav) ---------- */
 .mast{border-bottom:5px double var(--ink);background:var(--paper)}
 .mast .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem 1.5rem;padding:.9rem 0 .6rem}
-.brand{text-decoration:none;color:var(--ink);display:block;line-height:1.1}
+.brand{text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:.7rem;line-height:1.1}
+.brand-logo{width:52px;height:auto;flex:none}
 .brand:hover{color:var(--burg)}
 .brand-main{display:block;font:800 1.7rem/1 var(--head);letter-spacing:-.01em}
 .brand-tag{display:block;font:italic .95rem/1.3 var(--serif);color:var(--muted);margin-top:.25rem}
@@ -59,8 +60,6 @@ section{padding:3rem 0}
 .mast nav a{display:inline-block;padding:.55rem .75rem;font:600 1rem var(--sans);color:var(--ink);text-decoration:none;border-bottom:3px solid transparent}
 .mast nav a:hover{border-bottom-color:var(--orange)}
 .mast nav a[aria-current="page"],.mast nav a[aria-current="true"]{border-bottom-color:var(--burg);color:var(--burg)}
-.mast nav a.nav-join{background:var(--burg);color:#fff;border-radius:2px;border-bottom-color:var(--burg)}
-.mast nav a.nav-join:hover{background:var(--green);border-bottom-color:var(--green);color:#fff}
 @media (max-width:640px){
   .brand-main{font-size:1.45rem}
   .mast nav a{padding:.5rem .55rem;font-size:.95rem}
@@ -127,15 +126,6 @@ section{padding:3rem 0}
 .contents .when{margin:.2rem 0 0;font:.95rem/1.4 var(--sans);color:var(--muted)}
 .more{margin-top:1.2rem}
 
-/* team tiles (home) */
-.tiles{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-@media (min-width:760px){.tiles{grid-template-columns:repeat(4,1fr)}}
-.tile{display:flex;flex-direction:column;gap:.6rem;height:100%;padding:1rem;border:2px solid var(--ink);color:var(--ink);text-decoration:none;background:var(--paper)}
-.tile:hover{background:var(--paper-2);color:var(--ink)}
-.tile:hover .tile-name{text-decoration:underline;text-decoration-color:var(--burg)}
-.tile svg{width:64px;height:auto}
-.tile-name{font:800 1.3rem/1.1 var(--head)}
-.tile-role{font:600 .9rem var(--sans);color:var(--muted)}
 
 /* CTA band */
 .band{background:var(--burg);color:#fff;padding:3rem 0;margin-top:2rem}
@@ -191,40 +181,7 @@ section{padding:3rem 0}
 .ev.is-example{background:var(--paper-2);padding-inline:1rem}
 
 /* ---------- team page ---------- */
-.cards{list-style:none;display:grid;gap:1.5rem}
-@media (min-width:760px){.cards{grid-template-columns:1fr 1fr}}
-.card{position:relative;display:grid;grid-template-columns:96px 1fr;gap:1rem 1.2rem;border:2px solid var(--ink);padding:1.2rem;background:var(--paper)}
-.card:hover{background:var(--paper-2)}
-.card svg{width:96px;height:auto}
-.card h2{font-size:1.7rem;margin:0}
-.card .role{font:700 .85rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--burg);margin:.15rem 0 .6rem}
-.card p{margin:0 0 .4rem;font-size:1rem;line-height:1.5}
-.card a.more-link{font:700 1rem var(--sans);color:var(--burg)}
-.card a.more-link::after{content:"";position:absolute;inset:0}   /* whole card is clickable */
-.card:focus-within{outline:3px solid var(--burg);outline-offset:3px}
-.card a.more-link:focus-visible{outline:none}
-
-/* ---------- officer profile pages ---------- */
 .crumbs{font:.95rem var(--sans);padding-top:1.6rem}
-.profile{display:grid;gap:2rem 3rem;padding:1.5rem 0 2rem;align-items:start}
-@media (min-width:860px){.profile{grid-template-columns:260px 1fr}}
-.profile .plate svg{width:min(220px,60%);height:auto}
-.profile h1{margin-bottom:.1em}
-.profile .role{font:700 1rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--burg);margin:0 0 1.5rem}
-.libcard{border:2px solid var(--ink);background:#FFFDF6;padding:1.2rem 1.4rem;max-width:36rem}
-.libcard .stripe{height:.8rem;background:var(--burg);margin:-1.2rem -1.4rem 1rem}
-.libcard dl{margin:0}
-.libcard .f{display:grid;gap:.1rem 1rem;padding:.7rem 0;border-bottom:1px solid var(--rule)}
-@media (min-width:560px){.libcard .f{grid-template-columns:9rem 1fr;align-items:baseline}}
-.libcard dt{font:700 .75rem/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.libcard dd{margin:0;font:700 1.2rem/1.35 var(--head)}
-.shelf{display:flex;align-items:flex-end;gap:.5rem;margin:2rem 0 0;padding:0 .5rem;border-bottom:8px solid var(--ink);min-height:12rem}
-.spine{writing-mode:vertical-rl;font:800 1.15rem/1.1 var(--head);padding:1rem .8rem;border:2px solid var(--ink);border-bottom:0;max-height:12rem;overflow:hidden}
-.spine-burg{background:var(--burg);color:#fff;height:11rem}
-.spine-green{background:var(--green);color:#fff;height:12rem}
-.spine-orange{background:var(--orange);color:var(--ink);height:10rem}
-.spine-ink{background:var(--ink);color:var(--paper);height:11.5rem}
-.shelf-label{font:600 .9rem var(--sans);color:var(--muted);margin:.6rem 0 0}
 .words{border:2px dashed var(--ink);padding:1rem 1.2rem;max-width:36rem;margin-top:1.6rem}
 .words h2{font-size:1.2rem;margin-bottom:.4rem}
 .words p{margin:0}
@@ -247,9 +204,70 @@ section{padding:3rem 0}
 .foot a{color:var(--paper);font:600 1rem var(--sans)}
 .foot a:hover{color:var(--orange)}
 .foot :focus-visible{outline-color:var(--paper)}
-.foot .fine{font:.9rem/1.45 var(--sans);color:#E6D9BD}
+.foot .fine{font:.9rem/1.45 var(--sans);color:#F3DDBF}
 
 noscript .wrap{border:2px dashed var(--ink);padding:1rem;margin:1rem auto;background:var(--paper-2)}
 
 @media print{.mast nav,.skip{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* ---- photo slots (team page + officer pages) ---- */
+.photo-slot{position:relative;display:block;aspect-ratio:4/5;background:var(--c,var(--ink));color:var(--ci,var(--paper));border:2px solid var(--ink);border-radius:3px;overflow:hidden}
+.photo-slot .initial{position:absolute;inset:0;display:grid;place-items:center;padding-bottom:1.6rem;font:800 clamp(4rem,14vw,7rem)/1 var(--serif)}
+.photo-slot .soon{position:absolute;left:0;right:0;bottom:0;padding:.35rem .5rem;background:var(--paper);color:var(--ink);border-top:2px solid var(--ink);font:700 .75rem/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;text-align:center}
+.photo-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo-slot.has-photo .initial,.photo-slot.has-photo .soon{display:none}
+.photo-wrap{position:relative}
+.photo-wrap::before{content:"";position:absolute;z-index:1;top:-.7rem;left:50%;width:4.5rem;height:1.4rem;margin-left:-2.25rem;background:var(--orange);opacity:.85;border:1px solid var(--ink);transform:rotate(-3deg)}
+
+/* ---- team page ---- */
+.team-grid{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:2rem 1rem;padding-top:.8rem}
+@media (min-width:960px){.team-grid{grid-template-columns:repeat(4,1fr);gap:2rem 1.4rem}}
+.team-grid>li:nth-child(even) .photo-wrap{transform:rotate(1.2deg)}
+.team-grid>li:nth-child(odd) .photo-wrap{transform:rotate(-1deg)}
+@media (min-width:960px){.team-grid>li:nth-child(even){margin-top:1.6rem}}
+.member{position:relative}
+.member h2{font-size:1.5rem;margin:.9rem 0 0}
+.member h2 a{color:var(--ink);text-decoration:none}
+.member h2 a::after{content:"";position:absolute;inset:0}
+.member:hover h2 a{text-decoration:underline;text-decoration-color:var(--burg);text-decoration-thickness:3px}
+.member .role{font:700 .8rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--burg);margin:.15rem 0 .4rem}
+.member .fav{margin:0;font-size:.95rem;line-height:1.4;color:var(--muted)}
+.member:focus-within{outline:3px solid var(--burg);outline-offset:6px}
+.member h2 a:focus-visible{outline:none}
+
+/* ---- officer page ---- */
+.person{display:grid;gap:2rem 3rem;padding:1.5rem 0 2rem;align-items:start}
+@media (min-width:760px){.person{grid-template-columns:minmax(220px,320px) 1fr}}
+.person .photo-wrap{max-width:320px;transform:rotate(-1deg)}
+.person h1{margin:0 0 .1em}
+.person .role{font:700 1rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--burg);margin:0 0 1.2rem}
+.facts{margin:0;max-width:34rem;border-top:2px solid var(--ink)}
+.facts>div{display:grid;gap:.1rem 1rem;padding:.8rem 0;border-bottom:1px solid var(--rule)}
+@media (min-width:560px){.facts>div{grid-template-columns:9rem 1fr;align-items:baseline}}
+.facts dt{font:700 .75rem/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:0;font:700 1.25rem/1.35 var(--head)}
+
+/* ---- welcome popup ---- */
+.popup{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:1rem;background:rgba(52,18,13,.72)}
+.popup-box{position:relative;width:100%;max-width:30rem;max-height:92vh;overflow:auto;background:var(--paper);border:3px solid var(--ink);border-radius:3px;padding:2.6rem 1.6rem 1.6rem;transform:rotate(-.6deg)}
+.popup-box::before{content:"";position:absolute;top:-.8rem;left:50%;width:5rem;height:1.5rem;margin-left:-2.5rem;background:var(--orange);border:1px solid var(--ink);transform:rotate(2deg)}
+.popup-box:focus{outline:none}
+.popup-box h2{font-size:clamp(1.7rem,6vw,2.2rem);margin:.1em 0 .3em}
+.popup-box p{margin:0 0 .5rem}
+.popup-when{font:700 1.2rem var(--head)}
+.popup-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.4rem;margin-top:1.2rem!important}
+.popup-later{background:none;border:0;padding:0;cursor:pointer;font:700 1rem var(--sans);color:var(--burg);text-decoration:underline}
+.popup-x{position:absolute;top:.6rem;right:.7rem;background:none;border:2px solid var(--ink);border-radius:2px;padding:.3rem .6rem;cursor:pointer;font:700 .85rem var(--sans);color:var(--ink)}
+.popup-x:hover{background:var(--ink);color:var(--paper)}
+.popup button:focus-visible,.popup a:focus-visible{outline:3px solid var(--burg);outline-offset:2px}
+
+.nav-signup{font:700 1rem var(--sans);cursor:pointer;background:var(--burg);color:#fff;border:0;border-radius:2px;padding:.45rem .8rem}
+.nav-signup:hover{background:var(--green)}
+.nav-signup[hidden]{display:none}
+.su-form label{display:block;font:700 .85rem var(--sans);letter-spacing:.06em;text-transform:uppercase;margin:1rem 0 .3rem}
+.su-form input[type=email]{width:100%;font:1.1rem var(--sans);padding:.7rem .8rem;border:2px solid var(--ink);border-radius:2px;background:#fff;color:var(--ink)}
+.su-form input:focus-visible{outline:3px solid var(--burg);outline-offset:2px}
+.su-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.su-msg{min-height:1.4em;margin:.5rem 0 0;font-weight:700;color:var(--burg)}

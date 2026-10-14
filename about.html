@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About · FHS Book Club</title>
 <meta name="description" content="What the FHS Book Club does, who it's for, and when we meet.">
-<meta name="theme-color" content="#7A1F2B">
+<meta name="theme-color" content="#C23A25">
+<link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,8 +14,9 @@
 <header class="mast">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <span class="brand-main">FHS Book Club</span>
-      <span class="brand-tag">Read good books. Discuss. Repeat.</span>
+      <img class="brand-logo" src="images/logo.png" alt="" width="56" height="55">
+      <span class="brand-text"><span class="brand-main">FHS Book Club</span>
+      <span class="brand-tag">Read good books. Discuss. Repeat.</span></span>
     </a>
     <nav aria-label="Main">
       <ul>
@@ -22,7 +24,7 @@
         <li><a href="about.html" aria-current="page">About</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="team.html">Meet the Team</a></li>
-        <li><a class="nav-join" href="join.html">Join</a></li>
+        <li><button class="nav-signup" type="button" data-signup-open hidden>Sign up</button></li>
       </ul>
     </nav>
   </div>
@@ -42,7 +44,6 @@
     <h2>What we do</h2>
     <p>Most of it is discussion: what we liked, what we didn&rsquo;t, what we&rsquo;d argue about. About once a month we aim to do something more hands-on, like the activities below.</p>
     <p>We&rsquo;re also planning to promote events at the local library. That&rsquo;s a plan, not a done deal. Nothing is confirmed and no dates are set, and we&rsquo;ll update the <a href="events.html#library">Events page</a> when that changes.</p>
-    <p class="hand orange"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M4 6 C 6 24, 18 32, 32 31" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M24 24 L33 31 L23 37" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>dates and rooms go on the Events page once they&rsquo;re real.</span></p>
   </div>
   <aside class="glance" aria-labelledby="glanceH">
     <h2 id="glanceH">At a glance</h2>
@@ -59,11 +60,11 @@
 <section class="wrap" aria-labelledby="actsH">
   <p class="kicker">Things we might do</p>
   <h2 id="actsH">Six activities on our list</h2>
-  <p class="prose" style="max-width:38rem">These are ones we&rsquo;ve discussed. Each one is an idea until it shows up on the <a href="events.html#activities">Events page</a> as confirmed.</p>
+  <p class="prose" style="max-width:38rem">Book bedazzling is our first one. The rest are ones we&rsquo;ve discussed, and each is an idea until it shows up on the <a href="events.html#activities">Events page</a> as confirmed.</p>
   <ol class="chapters cols">
+    <li><div><h3>Book bedazzling</h3><p>Gems, paint pens and stickers on a notebook or a book you own. Not library books.</p><p class="tag">This is our first event. See the <a href="events.html#activities">Events page</a> for the date.</p></div></li>
     <li><div><h3>Book bingo</h3><p>A bingo card of reading prompts, like &ldquo;a book with a one-word title.&rdquo; Cross off squares as you read.</p><p class="tag">We&rsquo;ve discussed this one. Nothing is scheduled yet.</p></div></li>
     <li><div><h3>Bookmark making</h3><p>Make a bookmark, keep it, lose it inside a library book, make another.</p><p class="tag">We&rsquo;ve discussed this one. Nothing is scheduled yet.</p></div></li>
-    <li><div><h3>Book bedazzling</h3><p>Gems, paint pens and stickers on a notebook or a book you own. Not library books.</p><p class="tag">We&rsquo;ve discussed this one. Nothing is scheduled yet.</p></div></li>
     <li><div><h3>Blind-date-with-a-book</h3><p>Books wrapped in paper with a few clues on the outside. You pick one without seeing the cover.</p><p class="tag">We&rsquo;ve discussed this one. Nothing is scheduled yet.</p></div></li>
     <li><div><h3>Buddy reading</h3><p>Pair up, read the same book, and check in about it halfway through.</p><p class="tag">We&rsquo;ve discussed this one. Nothing is scheduled yet.</p></div></li>
     <li><div><h3>Book swaps</h3><p>Bring a book you&rsquo;re done with and take home one you haven&rsquo;t read.</p><p class="tag">We&rsquo;ve discussed this one. Nothing is scheduled yet.</p></div></li>
@@ -84,10 +85,10 @@
 <section class="band" aria-labelledby="bandH">
   <div class="wrap">
     <div>
-      <h2 id="bandH">Want in?</h2>
-      <p>It takes three steps. We wrote them down.</p>
+      <h2 id="bandH">Come see for yourself.</h2>
+      <p>Check the Events page for the next meeting.</p>
     </div>
-    <a class="btn" href="join.html">Join the FHS Book Club</a>
+    <a class="btn" href="events.html">See upcoming events</a>
   </div>
 </section>
 </main>
@@ -105,12 +106,11 @@
         <li><a href="about.html">About</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="team.html">Meet the Team</a></li>
-        <li><a href="join.html">Join</a></li>
       </ul>
     </div>
     <div>
       <h2>Good to know</h2>
-      <p class="fine">This website has no sign-up form, no login and no tracking. It doesn&rsquo;t collect anything about you.</p>
+      <p class="fine" data-foot-note>This website has no sign-up form, no login and no tracking. It doesn&rsquo;t collect anything about you.</p>
     </div>
   </div>
 </footer>

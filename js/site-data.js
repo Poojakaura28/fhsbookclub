@@ -19,23 +19,35 @@
    ===================================================================== */
 window.FHS = {
 
-  /* ---- SIGN-UP LINK ------------------------------------------------
-     Paste the school-approved sign-up link between the quotes, like:
-       signupUrl: "https://forms.example.com/your-form",
-     Leave it empty ("") until you have it. */
-  signupUrl: "",
 
-  /* ---- QUESTIONS ---------------------------------------------------
-     A school-approved way to ask the club a question (shown on Join). */
-  contact: "[Add a school-approved way to ask questions]",
+
+  /* ---- EMAIL SIGN-UP --------------------------------------------------
+     Until "endpoint" is filled in, the sign-up popup shows but cannot send anything.
+     To turn it on, make a free form at formspree.io (it emails you every
+     sign-up), then paste its URL here, like:
+       endpoint: "https://formspree.io/f/abcdwxyz"
+     Get the school's OK before collecting students' emails. */
+  signup: { endpoint: "https://formspree.io/f/mjygaeeb" },
 
   /* ---- CURRENT BOOK ---------------------------------------------- */
-  currentBook: { title: "To be announced" },
+  currentBook: { title: "The Southern Book Club’s Guide to Slaying Vampires by Grady Hendrix" },
 
   /* ---- NEXT UP (shown on the Home page and the Join page) --------- */
   next: {
-    meeting: { date: "Date to be announced", room: "Room to be announced" },
-    event:   { title: "To be announced", date: "Date to be announced", status: "planned" }
+    meeting: { date: "Thursday, October 15, 2026", room: "Room 87" },
+    event:   { title: "First book bedazzling event", date: "Thursday, October 15, 2026", status: "confirmed" }
+  },
+
+  /* ---- OFFICER PHOTOS ---------------------------------------------
+     Put each photo in the images/team folder, then type its file name
+     below. Use JPG, PNG or WebP (not HEIC), about 1 MB or less, taller
+     than wide (4:5 is ideal). Get the student's and school's OK first.
+     Until a photo is added, the page shows a "Photo coming soon" slot. */
+  team: {
+    shrivalli: { photo: "shrivalli.jpg", alt: "Shrivalli, the club's president" },
+    sophia:    { photo: "", alt: "Sophia, the club's vice president" },
+    agrima:    { photo: "", alt: "Agrima, the club's treasurer" },
+    pooja:     { photo: "", alt: "Pooja, the club's secretary" }
   },
 
   /* ---- STATUS LABELS (what the stamps say) ------------------------ */
@@ -54,24 +66,25 @@ window.FHS = {
 
     /* Regular club meetings: every other Thursday during lunch */
     meetings: [
-      { title: "Club meeting", date: "Date to be announced",
-        location: "At school, during lunch. Room to be announced.",
+      { title: "Club meeting", date: "Thursday, October 15, 2026",
+        location: "At school, during lunch, in Room 87.",
         status: "regular", note: "Every other Thursday." },
       { title: "Club meeting", date: "Date to be announced",
-        location: "At school, during lunch. Room to be announced.",
+        location: "At school, during lunch, in Room 87.",
         status: "regular", note: "Every other Thursday." },
       { title: "Club meeting", date: "Date to be announced",
-        location: "At school, during lunch. Room to be announced.",
+        location: "At school, during lunch, in Room 87.",
         status: "regular", note: "Every other Thursday." }
     ],
 
     /* Monthly book activities (we aim for about one a month) */
     activities: [
+      { title: "Book bedazzling: our first event", date: "Thursday, October 15, 2026",
+        location: "At school, during lunch, in Room 87.",
+        status: "confirmed", note: "Our first book bedazzling event." },
       { title: "Book bingo", date: "Date to be announced", location: "Location to be announced",
         status: "idea", note: "We've talked about this one. Nothing is scheduled yet." },
       { title: "Bookmark making", date: "Date to be announced", location: "Location to be announced",
-        status: "idea", note: "We've talked about this one. Nothing is scheduled yet." },
-      { title: "Book bedazzling", date: "Date to be announced", location: "Location to be announced",
         status: "idea", note: "We've talked about this one. Nothing is scheduled yet." },
       { title: "Blind-date-with-a-book", date: "Date to be announced", location: "Location to be announced",
         status: "idea", note: "We've talked about this one. Nothing is scheduled yet." },
@@ -90,15 +103,6 @@ window.FHS = {
       { title: "Library event (title to be announced)", date: "Date to be announced",
         location: "Local library. Details to be announced.",
         status: "planned", note: "This is a plan. Nothing is confirmed yet." }
-    ],
-
-    /* Past events. These two rows are EXAMPLES so you can see the layout.
-       Replace them with real past events, or delete them. */
-    past: [
-      { title: "[Example] Past event title", date: "[Example date]", location: "[Example location]",
-        status: "example", note: "Example row only. This did not necessarily happen. Replace or delete it." },
-      { title: "[Example] Another past event", date: "[Example date]", location: "[Example location]",
-        status: "example", note: "Example row only. This did not necessarily happen. Replace or delete it." }
     ]
   }
 };
